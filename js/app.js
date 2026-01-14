@@ -1,12 +1,23 @@
 const tabla = document.getElementById("tablaPartidos");
 const form = document.getElementById("quinielaForm");
 const resultado = document.getElementById("resultado");
+const JORNADA_ACTUAL = "jornada-01.json";
 
 // Cargar partidos
-fetch("data/partidos.json")
+fetch("data/" + JORNADA_ACTUAL)
   .then(res => res.json())
-  .then(partidos => {
-    partidos.forEach(p => {
+  .then(data => {
+
+    // Mostrar info de jornada
+    document.getElementById("tituloJornada").textContent =
+      `${data.liga} – Jornada ${data.jornada}`;
+
+    const fecha = new Date(data.fechaLimite);
+    document.getElementById("fechaLimite").textContent =
+      "Fecha límite: " + fecha.toLocaleString();
+
+    // Cargar partidos
+    data.partidos.forEach(p => {
       const fila = document.createElement("tr");
       fila.innerHTML = `
         <td>${p.local} vs ${p.visita}</td>
@@ -16,7 +27,9 @@ fetch("data/partidos.json")
       `;
       tabla.appendChild(fila);
     });
+
   });
+
 
 // Guardar pronóstico
 form.addEventListener("submit", e => {
