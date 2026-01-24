@@ -1,4 +1,4 @@
-const JORNADA_ACTUAL = "Jornada4.json"; // CAMBIA AQUÍ LA JORNADA
+const JORNADA_ACTUAL = "jornada4.json"; // CAMBIA AQUÍ LA JORNADA
 
 const tabla = document.getElementById("tablaPartidos");
 const form = document.getElementById("quinielaForm");
