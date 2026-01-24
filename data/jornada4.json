@@ -1,0 +1,16 @@
+{
+  "liga": "Liga MX",
+  "jornada": 4,
+  "fechaLimite": "2026-02-02T19:00",
+  "partidos": [
+    { "id": 1, "local": "Puebla", "visita": "Toluca" },
+    { "id": 2, "local": "Pumas", "visita": "Santos" },
+    { "id": 3, "local": "Juárez", "visita": "Cruz Azul" },
+    { "id": 4, "local": "Atlas", "visita": "Maztlán" },
+    { "id": 5, "local": "Atl. San Luis", "visita": "Guadalajara" },
+    { "id": 6, "local": "Monterrey", "visita": "Tijuana" },
+    { "id": 7, "local": "León", "visita": "Tigres" },
+    { "id": 8, "local": "América", "visita": "Necaxa" },
+    { "id": 9, "local": "Querétaro", "visita": "Pachuca" }
+  ]
+}
